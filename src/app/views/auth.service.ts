@@ -10,6 +10,7 @@ import { environment } from './../../../src/environments/environment';
 export class AuthService {
  apiUrl: string = environment.apiUrl;
 
+
  constructor(private http: HttpClient) { }
 
  registerUser(newUser: any): Observable<any> {

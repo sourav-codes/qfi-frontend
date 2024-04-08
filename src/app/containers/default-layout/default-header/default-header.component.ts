@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-
+import { AuthService } from 'src/app/views/auth.service';
 import { ClassToggleService, HeaderComponent } from '@coreui/angular';
 
 @Component({
@@ -15,7 +15,11 @@ export class DefaultHeaderComponent extends HeaderComponent {
   public newTasks = new Array(5)
   public newNotifications = new Array(5)
 
-  constructor(private classToggler: ClassToggleService) {
+  constructor(private classToggler: ClassToggleService,private authService: AuthService) {
     super();
+  }
+
+  logoutUser() :void{
+       this.authService.logout()
   }
 }

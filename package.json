@@ -11,7 +11,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node -r dotenv/config mynode.js && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -37,6 +37,7 @@
     "@coreui/icons-angular": "~4.7.0",
     "@coreui/utils": "^2.0.2",
     "chart.js": "^3.9.1",
+    "dotenv": "^16.4.5",
     "lodash-es": "^4.17.21",
     "ngx-scrollbar": "^13.0.3",
     "rxjs": "~7.8.1",
